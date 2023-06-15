@@ -1,5 +1,6 @@
 package io.github.felix3621.example;
 
+import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.item.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -21,6 +22,7 @@ public class Example {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
 
         eventBus.addListener(this::setup);
 

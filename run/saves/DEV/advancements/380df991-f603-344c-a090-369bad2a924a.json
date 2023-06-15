@@ -1,6 +1,7 @@
 {
   "minecraft:adventure/adventuring_time": {
     "criteria": {
+      "minecraft:lukewarm_ocean": "2023-06-15 17:41:03 +0200",
       "minecraft:stony_shore": "2023-06-15 16:47:09 +0200",
       "minecraft:savanna": "2023-06-15 16:47:38 +0200"
     },
