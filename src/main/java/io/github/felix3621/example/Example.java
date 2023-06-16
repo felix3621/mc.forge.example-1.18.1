@@ -3,6 +3,7 @@ package io.github.felix3621.example;
 import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
+import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -29,7 +30,9 @@ public class Example {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+
         ModPaintings.register(eventBus);
+        ModSounds.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

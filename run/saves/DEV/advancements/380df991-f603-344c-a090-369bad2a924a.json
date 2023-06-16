@@ -116,8 +116,10 @@
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:lukewarm_ocean": "2023-06-15 17:41:03 +0200",
+      "minecraft:river": "2023-06-16 20:09:02 +0200",
       "minecraft:stony_shore": "2023-06-15 16:47:09 +0200",
-      "minecraft:savanna": "2023-06-15 16:47:38 +0200"
+      "minecraft:savanna": "2023-06-15 16:47:38 +0200",
+      "minecraft:plains": "2023-06-16 20:09:11 +0200"
     },
     "done": false
   },
@@ -175,6 +177,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/birch_boat": {
+    "criteria": {
+      "in_water": "2023-06-16 20:09:02 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/stone_slab_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2023-06-16 14:22:37 +0200"
@@ -208,6 +216,12 @@
   "minecraft:recipes/tools/iron_shovel": {
     "criteria": {
       "has_iron_ingot": "2023-06-16 12:25:49 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/acacia_boat": {
+    "criteria": {
+      "in_water": "2023-06-16 20:09:02 +0200"
     },
     "done": true
   },
@@ -277,6 +291,18 @@
     },
     "done": true
   },
+  "minecraft:recipes/transportation/jungle_boat": {
+    "criteria": {
+      "in_water": "2023-06-16 20:09:02 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/spruce_boat": {
+    "criteria": {
+      "in_water": "2023-06-16 20:09:02 +0200"
+    },
+    "done": true
+  },
   "minecraft:recipes/decorations/stone_brick_walls_from_stone_stonecutting": {
     "criteria": {
       "has_stone": "2023-06-16 14:22:37 +0200"
@@ -298,6 +324,12 @@
   "minecraft:recipes/redstone/heavy_weighted_pressure_plate": {
     "criteria": {
       "has_iron_ingot": "2023-06-16 12:25:49 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/dark_oak_boat": {
+    "criteria": {
+      "in_water": "2023-06-16 20:09:02 +0200"
     },
     "done": true
   },
@@ -418,6 +450,12 @@
   "minecraft:recipes/combat/crossbow": {
     "criteria": {
       "has_iron_ingot": "2023-06-16 12:25:49 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/transportation/oak_boat": {
+    "criteria": {
+      "in_water": "2023-06-16 20:09:02 +0200"
     },
     "done": true
   },
