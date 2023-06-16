@@ -35,6 +35,9 @@
   "block.example.ebony_door": "Ebony Door",
   "block.example.ebony_trapdoor": "Ebony Trapdoor",
 
+  "block.example.pink_rose": "Pink Rose",
+  "block.example.potted_pink_rose": "Potted Pink Rose",
+
   "itemGroup.exampletab": "Example Mod",
 
   "item.example.dowsing_rod.no_valuables": "No valuables found",

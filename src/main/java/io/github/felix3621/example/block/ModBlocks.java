@@ -6,6 +6,7 @@ import io.github.felix3621.example.item.ModCreativeModeTab;
 import io.github.felix3621.example.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
@@ -79,7 +80,18 @@ public class ModBlocks {
             () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(5f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.EXAMPLE_TAB);
 
+    public static final RegistryObject<Block> PINK_ROSE = registerBlock("pink_rose",
+            () -> new FlowerBlock(MobEffects.LEVITATION, 8,
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noOcclusion()), ModCreativeModeTab.EXAMPLE_TAB);
+    public static final RegistryObject<Block> POTTED_PINK_ROSE = registerBlockWithoutBlockItem("potted_pink_rose",
+            () -> new FlowerPotBlock(null, ModBlocks.PINK_ROSE,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_DANDELION).noOcclusion()));
 
+
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block,
                                                                      CreativeModeTab tab, String tooltipKey) {
