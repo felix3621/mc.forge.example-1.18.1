@@ -19,6 +19,11 @@
   "block.example.citrine_wall": "Citrine Wall",
   "block.example.citrine_fence_gate": "Citrine Fence Gate",
 
+  "block.example.citrine_button": "Citrine Button",
+  "block.example.citrine_pressure_plate": "Citrine Pressure Plate",
+  "block.example.ebony_door": "Ebony Door",
+  "block.example.ebony_trapdoor": "Ebony Trapdoor",
+
   "itemGroup.exampletab": "Example Mod",
 
   "item.example.dowsing_rod.no_valuables": "No valuables found",
