@@ -15,5 +15,8 @@
 
   "itemGroup.exampletab": "Example Mod",
 
-  "item.example.dowsing_rod.no_valuables": "No valuables found"
+  "item.example.dowsing_rod.no_valuables": "No valuables found",
+  "tooltip.example.dowsing_rod.tooltip.shift": "Right Click to find valuables!",
+  "tooltip.example.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information!",
+  "tooltip.example.block.speedy_block": "I am speed!"
 }
