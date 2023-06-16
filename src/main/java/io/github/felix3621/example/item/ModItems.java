@@ -3,6 +3,7 @@ package io.github.felix3621.example.item;
 import io.github.felix3621.example.Example;
 import io.github.felix3621.example.item.custom.CoalCokeItem;
 import io.github.felix3621.example.item.custom.DowsingRodItem;
+import io.github.felix3621.example.item.custom.LevitationSwordItem;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -28,7 +29,7 @@ public class ModItems {
             () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
 
     public static final RegistryObject<Item> CITRINE_SWORD = ITEMS.register("citrine_sword",
-            () -> new SwordItem(ModTiers.CITRINE, 2, 3f,
+            () -> new LevitationSwordItem(ModTiers.CITRINE, 2, 3f,
                     new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
     public static final RegistryObject<Item> CITRINE_PICKAXE = ITEMS.register("citrine_pickaxe",
             () -> new PickaxeItem(ModTiers.CITRINE, 1, 1f,
