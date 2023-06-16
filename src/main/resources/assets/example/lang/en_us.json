@@ -5,6 +5,12 @@
   "item.example.cucumber": "Cucumber",
   "item.example.coal_coke": "Coal Coke",
 
+  "item.example.citrine_pickaxe": "Citrine Pickaxe",
+  "item.example.citrine_axe": "Citrine Axe",
+  "item.example.citrine_shovel": "Citrine Shovel",
+  "item.example.citrine_hoe": "Citrine Hoe",
+  "item.example.citrine_sword": "Citrine Sword",
+
   "block.example.citrine_block": "Citrine Block",
   "block.example.raw_citrine_block": "Raw Citrine Block",
   "block.example.citrine_ore": "Citrine Ore",
