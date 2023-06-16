@@ -1,6 +1,7 @@
 package io.github.felix3621.example.block;
 
 import io.github.felix3621.example.Example;
+import io.github.felix3621.example.block.custom.SpeedyBlock;
 import io.github.felix3621.example.item.ModCreativeModeTab;
 import io.github.felix3621.example.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -38,6 +39,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> ENDSTONE_CITRINE_ORE = registerBlock("endstone_citrine_ore",
             () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
                     .strength(5f).requiresCorrectToolForDrops()), ModCreativeModeTab.EXAMPLE_TAB);
+
+    public static final RegistryObject<Block> SPEEDY_BLOCK = registerBlock("speedy_block",
+            () -> new SpeedyBlock(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.EXAMPLE_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
