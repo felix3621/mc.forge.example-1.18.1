@@ -3,6 +3,7 @@ package io.github.felix3621.example.item;
 import io.github.felix3621.example.Example;
 import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.item.custom.*;
+import io.github.felix3621.example.sound.ModSounds;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -69,6 +70,10 @@ public class ModItems {
     public static final RegistryObject<Item> CUCUMBER_SEEDS = ITEMS.register("cucumber_seeds",
             () -> new ItemNameBlockItem(ModBlocks.CUCUMBER_PLANT.get(),
                     new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
+
+    public static final RegistryObject<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.register("bar_brawl_music_disc",
+            () -> new RecordItem(4, ModSounds.BAR_BRAWL,
+                    new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {

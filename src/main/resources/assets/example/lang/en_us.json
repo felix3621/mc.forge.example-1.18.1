@@ -22,6 +22,9 @@
 
   "item.example.cucumber_seeds": "Cucumber seeds",
 
+  "item.example.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.example.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
   "block.example.citrine_block": "Citrine Block",
   "block.example.raw_citrine_block": "Raw Citrine Block",
   "block.example.citrine_ore": "Citrine Ore",

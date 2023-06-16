@@ -34,5 +34,14 @@
     "sounds": [
       "example:citrine_lamp_fall"
     ]
-  }
+  },
+  "bar_brawl": {
+  "sounds": [
+    {
+      "name": "example:bar_brawl",
+      "stream": true
+    }
+  ]
+}
+
 }

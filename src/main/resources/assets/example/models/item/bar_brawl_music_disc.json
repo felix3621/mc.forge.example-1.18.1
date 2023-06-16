@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "example:item/bar_brawl_music_disc"
+  }
+}
