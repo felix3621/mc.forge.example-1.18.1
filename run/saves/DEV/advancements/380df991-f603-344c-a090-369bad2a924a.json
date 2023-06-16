@@ -1,4 +1,22 @@
 {
+  "minecraft:recipes/decorations/campfire": {
+    "criteria": {
+      "has_coal": "2023-06-16 11:12:06 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/decorations/smoker": {
+    "criteria": {
+      "has_furnace": "2023-06-16 11:11:59 +0200"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/coal_block": {
+    "criteria": {
+      "has_coal": "2023-06-16 11:12:06 +0200"
+    },
+    "done": true
+  },
   "minecraft:adventure/adventuring_time": {
     "criteria": {
       "minecraft:lukewarm_ocean": "2023-06-15 17:41:03 +0200",
@@ -6,6 +24,12 @@
       "minecraft:savanna": "2023-06-15 16:47:38 +0200"
     },
     "done": false
+  },
+  "minecraft:story/root": {
+    "criteria": {
+      "crafting_table": "2023-06-16 11:12:01 +0200"
+    },
+    "done": true
   },
   "DataVersion": 2865
 }
