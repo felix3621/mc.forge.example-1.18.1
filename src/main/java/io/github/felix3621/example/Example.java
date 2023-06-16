@@ -2,6 +2,7 @@ package io.github.felix3621.example;
 
 import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.item.ModItems;
+import io.github.felix3621.example.painting.ModPaintings;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -27,6 +28,7 @@ public class Example {
 
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModPaintings.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
