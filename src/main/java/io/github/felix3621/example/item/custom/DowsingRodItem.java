@@ -1,5 +1,6 @@
 package io.github.felix3621.example.item.custom;
 
+import io.github.felix3621.example.util.ModTags;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -67,7 +68,6 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE
-                || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE;
+        return ModTags.Blocks.DOWSING_ROD_VALUABLES.contains(block);
     }
 }
