@@ -59,6 +59,10 @@ public class ModItems {
             () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.FEET,
                     new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
 
+    public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
