@@ -1,6 +1,7 @@
 package io.github.felix3621.example.block;
 
 import io.github.felix3621.example.Example;
+import io.github.felix3621.example.block.custom.CitrineLampBlock;
 import io.github.felix3621.example.block.custom.SpeedyBlock;
 import io.github.felix3621.example.item.ModCreativeModeTab;
 import io.github.felix3621.example.item.ModItems;
@@ -89,6 +90,12 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> WINTER_WINDOW = registerBlock("winter_window",
             () -> new GlassBlock(BlockBehaviour.Properties.copy(Blocks.GLASS).noOcclusion()), ModCreativeModeTab.EXAMPLE_TAB);
+
+    public static final RegistryObject<Block> CITRINE_LAMP = registerBlock("citrine_lamp",
+            () -> new CitrineLampBlock(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(2f).requiresCorrectToolForDrops().lightLevel(
+                            (state) -> state.getValue(CitrineLampBlock.CLICKED) ? 15 : 0)),
+            ModCreativeModeTab.EXAMPLE_TAB);
 
 
 

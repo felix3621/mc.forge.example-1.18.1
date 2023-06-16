@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "example:block/citrine_lamp_off"
+    },
+    "clicked=true": {
+      "model": "example:block/citrine_lamp_on"
+    }
+  }
+}
