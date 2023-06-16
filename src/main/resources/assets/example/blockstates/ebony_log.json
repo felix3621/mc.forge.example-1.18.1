@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "example:block/ebony_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "example:block/ebony_log"
+    },
+    "axis=z": {
+      "model": "example:block/ebony_log_horizontal",
+      "x": 90
+    }
+  }
+}

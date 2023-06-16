@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "example:ebony_log",
+    "example:ebony_wood",
+    "example:stripped_ebony_log",
+    "example:stripped_ebony_wood"
+  ]
+}
