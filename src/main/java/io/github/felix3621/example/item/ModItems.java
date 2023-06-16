@@ -1,6 +1,7 @@
 package io.github.felix3621.example.item;
 
 import io.github.felix3621.example.Example;
+import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
@@ -64,6 +65,10 @@ public class ModItems {
 
     public static final RegistryObject<Item> FELIX_BOW = ITEMS.register("felix_bow",
             () -> new BowItem(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB).durability(500)));
+
+    public static final RegistryObject<Item> CUCUMBER_SEEDS = ITEMS.register("cucumber_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.CUCUMBER_PLANT.get(),
+                    new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
 
 
     public static void register(IEventBus eventBus) {

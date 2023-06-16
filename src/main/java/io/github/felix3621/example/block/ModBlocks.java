@@ -2,6 +2,7 @@ package io.github.felix3621.example.block;
 
 import io.github.felix3621.example.Example;
 import io.github.felix3621.example.block.custom.CitrineLampBlock;
+import io.github.felix3621.example.block.custom.CucumberPlantBlock;
 import io.github.felix3621.example.block.custom.SpeedyBlock;
 import io.github.felix3621.example.item.ModCreativeModeTab;
 import io.github.felix3621.example.item.ModItems;
@@ -96,6 +97,9 @@ public class ModBlocks {
                     .strength(2f).requiresCorrectToolForDrops().lightLevel(
                             (state) -> state.getValue(CitrineLampBlock.CLICKED) ? 15 : 0)),
             ModCreativeModeTab.EXAMPLE_TAB);
+
+    public static final RegistryObject<Block> CUCUMBER_PLANT = registerBlockWithoutBlockItem("cucumber_plant",
+            () -> new CucumberPlantBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion()));
 
 
 

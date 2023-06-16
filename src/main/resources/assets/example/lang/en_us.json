@@ -20,6 +20,8 @@
   "item.example.data_tablet": "Data Tablet",
   "item.example.felix_bow": "Felix bow",
 
+  "item.example.cucumber_seeds": "Cucumber seeds",
+
   "block.example.citrine_block": "Citrine Block",
   "block.example.raw_citrine_block": "Raw Citrine Block",
   "block.example.citrine_ore": "Citrine Ore",
@@ -44,6 +46,8 @@
 
   "block.example.winter_window": "Winter Window",
   "block.example.citrine_lamp": "Citrine Lamp",
+
+  "block.example.cucumber:plant": "Cucumber Plant",
 
   "itemGroup.exampletab": "Example Mod",
 
