@@ -1,6 +1,7 @@
 package io.github.felix3621.example.item;
 
 import io.github.felix3621.example.Example;
+import io.github.felix3621.example.item.custom.CoalCokeItem;
 import io.github.felix3621.example.item.custom.DowsingRodItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,6 +23,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> CUCUMBER = ITEMS.register("cucumber",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB).food(ModFoods.CUCUMBER)));
+
+    public static final RegistryObject<Item> COAL_COKE = ITEMS.register("coal_coke",
+            () -> new CoalCokeItem(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
