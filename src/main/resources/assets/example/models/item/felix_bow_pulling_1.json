@@ -1,0 +1,6 @@
+{
+  "parent": "example:item/felix_bow",
+  "textures": {
+    "layer0": "example:item/felix_bow_pulling_1"
+  }
+}

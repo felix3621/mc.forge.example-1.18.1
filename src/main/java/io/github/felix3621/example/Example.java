@@ -3,6 +3,7 @@ package io.github.felix3621.example;
 import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
+import io.github.felix3621.example.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
@@ -45,6 +46,8 @@ public class Example {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_PINK_ROSE.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WINTER_WINDOW.get(), RenderType.translucent());
+
+        ModItemProperties.addCustomItemProperties();
     }
 
     private void setup(final FMLCommonSetupEvent event) {
