@@ -4,6 +4,7 @@ import io.github.felix3621.example.Example;
 import io.github.felix3621.example.item.custom.CoalCokeItem;
 import io.github.felix3621.example.item.custom.DowsingRodItem;
 import io.github.felix3621.example.item.custom.LevitationSwordItem;
+import io.github.felix3621.example.item.custom.ModArmorItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,7 +47,7 @@ public class ModItems {
                     new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
 
     public static final RegistryObject<Item> CITRINE_HELMET = ITEMS.register("citrine_helmet",
-            () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.HEAD,
                     new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
     public static final RegistryObject<Item> CITRINE_CHESTPLATE = ITEMS.register("citrine_chestplate",
             () -> new ArmorItem(ModArmorMaterials.CITRINE, EquipmentSlot.CHEST,
