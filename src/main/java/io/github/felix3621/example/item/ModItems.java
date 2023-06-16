@@ -1,10 +1,7 @@
 package io.github.felix3621.example.item;
 
 import io.github.felix3621.example.Example;
-import io.github.felix3621.example.item.custom.CoalCokeItem;
-import io.github.felix3621.example.item.custom.DowsingRodItem;
-import io.github.felix3621.example.item.custom.LevitationSwordItem;
-import io.github.felix3621.example.item.custom.ModArmorItem;
+import io.github.felix3621.example.item.custom.*;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -61,6 +58,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> MAGIC_DUST = ITEMS.register("magic_dust",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
+
+    public static final RegistryObject<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB).stacksTo(1)));
 
 
     public static void register(IEventBus eventBus) {
