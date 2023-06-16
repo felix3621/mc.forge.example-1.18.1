@@ -13,6 +13,12 @@
   "block.example.endstone_citrine_ore": "Endstone Citrine Ore",
   "block.example.speedy_block": "Speedy Block",
 
+  "block.example.citrine_slab": "Citrine Slab",
+  "block.example.citrine_stairs": "Citrine Stairs",
+  "block.example.citrine_fence": "Citrine Fence",
+  "block.example.citrine_wall": "Citrine Wall",
+  "block.example.citrine_fence_gate": "Citrine Fence Gate",
+
   "itemGroup.exampletab": "Example Mod",
 
   "item.example.dowsing_rod.no_valuables": "No valuables found",
