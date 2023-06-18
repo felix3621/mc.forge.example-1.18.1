@@ -4,6 +4,7 @@ import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
+import io.github.felix3621.example.potion.ModPotions;
 import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.ModItemProperties;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -36,6 +37,7 @@ public class Example {
         ModSounds.register(eventBus);
 
         ModEffects.register(eventBus);
+        ModPotions.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
