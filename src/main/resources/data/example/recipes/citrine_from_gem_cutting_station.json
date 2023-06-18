@@ -1,0 +1,11 @@
+{
+  "type": "example:gem_cutting",
+  "ingredients": [
+    {
+      "item": "example:raw_citrine"
+    }
+  ],
+  "output": {
+    "item": "example:citrine"
+  }
+}

@@ -6,6 +6,7 @@ import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
 import io.github.felix3621.example.potion.ModPotions;
+import io.github.felix3621.example.recipe.ModRecipes;
 import io.github.felix3621.example.screen.GemCuttingStationScreen;
 import io.github.felix3621.example.screen.ModMenuTypes;
 import io.github.felix3621.example.sound.ModSounds;
@@ -48,6 +49,8 @@ public class Example {
 
         ModBlockEntities.register(eventBus);
         ModMenuTypes.register(eventBus);
+
+        ModRecipes.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
