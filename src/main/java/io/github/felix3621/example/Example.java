@@ -1,13 +1,17 @@
 package io.github.felix3621.example;
 
 import io.github.felix3621.example.block.ModBlocks;
+import io.github.felix3621.example.block.entity.ModBlockEntities;
 import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
 import io.github.felix3621.example.potion.ModPotions;
+import io.github.felix3621.example.screen.GemCuttingStationScreen;
+import io.github.felix3621.example.screen.ModMenuTypes;
 import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.BetterBrewingRecipe;
 import io.github.felix3621.example.util.ModItemProperties;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.alchemy.Potions;
@@ -42,6 +46,9 @@ public class Example {
         ModEffects.register(eventBus);
         ModPotions.register(eventBus);
 
+        ModBlockEntities.register(eventBus);
+        ModMenuTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -65,6 +72,8 @@ public class Example {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GEM_CUTTING_STATION.get(), RenderType.translucent());
 
         ModItemProperties.addCustomItemProperties();
+
+        MenuScreens.register(ModMenuTypes.GEM_CUTTING_STATION_MENU.get(), GemCuttingStationScreen::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
