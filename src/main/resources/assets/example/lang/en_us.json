@@ -65,6 +65,8 @@
   "block.example.ebony_leaves": "Ebony Leaves",
   "block.example.ebony_sapling": "Ebony Sapling",
 
+  "block.example.gem_cutting_station": "Gem Cutting Station",
+
   "itemGroup.exampletab": "Example Mod",
 
   "item.example.dowsing_rod.no_valuables": "No valuables found",
