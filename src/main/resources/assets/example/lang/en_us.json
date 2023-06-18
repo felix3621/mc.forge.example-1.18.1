@@ -67,5 +67,7 @@
   "tooltip.example.dowsing_rod.tooltip": "Press §eSHIFT§r for more Information!",
   "tooltip.example.block.speedy_block": "I am speed!",
 
-  "sounds.example.dowing_rod_found_ore": "Dowsing Rod found item"
+  "sounds.example.dowing_rod_found_ore": "Dowsing Rod found item",
+
+  "effect.example.freeze": "Freeze"
 }

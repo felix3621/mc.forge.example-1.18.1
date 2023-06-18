@@ -1,6 +1,7 @@
 package io.github.felix3621.example;
 
 import io.github.felix3621.example.block.ModBlocks;
+import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
 import io.github.felix3621.example.sound.ModSounds;
@@ -33,6 +34,8 @@ public class Example {
 
         ModPaintings.register(eventBus);
         ModSounds.register(eventBus);
+
+        ModEffects.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
