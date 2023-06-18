@@ -3,7 +3,7 @@
   "values": [
     "example:citrine_ore",
     "example:citrine_block",
-    "example:raw?citrine_block",
+    "example:raw_citrine_block",
     "example:deepslate_citrine_ore",
     "example:netherrack_citrine_ore",
     "example:endstone_citrine_ore"
