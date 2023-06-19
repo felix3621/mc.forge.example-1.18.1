@@ -4,6 +4,7 @@ import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.block.entity.ModBlockEntities;
 import io.github.felix3621.example.block.entity.ModWoodTypes;
 import io.github.felix3621.example.effect.ModEffects;
+import io.github.felix3621.example.enchantment.ModEnchantments;
 import io.github.felix3621.example.fluid.ModFluids;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
@@ -61,6 +62,7 @@ public class Example {
         ModParticles.register(eventBus);
 
         ModFluids.register(eventBus);
+        ModEnchantments.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);

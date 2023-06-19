@@ -80,5 +80,7 @@
 
   "sounds.example.dowing_rod_found_ore": "Dowsing Rod found item",
 
-  "effect.example.freeze": "Freeze"
+  "effect.example.freeze": "Freeze",
+
+  "enchantment.example.lightning_striker": "Lightning Striker"
 }
