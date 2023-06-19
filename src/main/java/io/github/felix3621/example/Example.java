@@ -5,6 +5,8 @@ import io.github.felix3621.example.block.entity.ModBlockEntities;
 import io.github.felix3621.example.block.entity.ModWoodTypes;
 import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.enchantment.ModEnchantments;
+import io.github.felix3621.example.entity.ModEntityTypes;
+import io.github.felix3621.example.entity.client.RaccoonRenderer;
 import io.github.felix3621.example.fluid.ModFluids;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
@@ -22,6 +24,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
 import net.minecraft.client.renderer.blockentity.SignRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -35,6 +38,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Example.MOD_ID)
@@ -64,8 +68,12 @@ public class Example {
         ModFluids.register(eventBus);
         ModEnchantments.register(eventBus);
 
+        ModEntityTypes.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
+
+        GeckoLib.initialize();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -96,6 +104,8 @@ public class Example {
 
         WoodType.register(ModWoodTypes.EBONY);
         BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
+
+        EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {

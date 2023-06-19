@@ -1,6 +1,8 @@
 package io.github.felix3621.example.event;
 
 import io.github.felix3621.example.Example;
+import io.github.felix3621.example.entity.ModEntityTypes;
+import io.github.felix3621.example.entity.custom.RaccoonEntity;
 import io.github.felix3621.example.event.loot.CoalCokeFromCreeperAdditionModifier;
 import io.github.felix3621.example.event.loot.CucumberSeedsFromGrassAdditionModifier;
 import io.github.felix3621.example.event.loot.DowsingRodInIglooAdditionModifier;
@@ -14,6 +16,7 @@ import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.EntityAttributeCreationEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
@@ -43,5 +46,10 @@ public class ModEventBusEvents {
     public static void registerParticleFactories(final ParticleFactoryRegisterEvent event) {
         Minecraft.getInstance().particleEngine.register(ModParticles.CITRINE_PARTICLES.get(),
                 CitrineParticles.Provider::new);
+    }
+
+    @SubscribeEvent
+    public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
+        event.put(ModEntityTypes.RACCOON.get(), RaccoonEntity.setAttribute());
     }
 }
