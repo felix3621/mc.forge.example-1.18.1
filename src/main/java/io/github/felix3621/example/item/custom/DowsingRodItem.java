@@ -1,6 +1,7 @@
 package io.github.felix3621.example.item.custom;
 
 import io.github.felix3621.example.item.ModItems;
+import io.github.felix3621.example.particle.ModParticles;
 import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.InventoryUtil;
 import io.github.felix3621.example.util.ModTags;
@@ -47,6 +48,8 @@ public class DowsingRodItem extends Item {
                         addNbtToDataTablet(player, positionClicked.below(i), blockBelow);
                     }
 
+                    spawnFoundParticles(pContext, positionClicked);
+
                     pContext.getLevel().playSound(player, positionClicked, ModSounds.DOWSING_ROD_FOUND_ORE.get(),
                             SoundSource.BLOCKS, 1f, 1f);
 
@@ -64,6 +67,16 @@ public class DowsingRodItem extends Item {
                 (player) -> player.broadcastBreakEvent(player.getUsedItemHand()));
 
         return super.useOn(pContext);
+    }
+
+    private void spawnFoundParticles(UseOnContext pContext, BlockPos positionClicked) {
+        for(int i = 0; i < 360; i++) {
+            if(i % 20 == 0) {
+                pContext.getLevel().addParticle(ModParticles.CITRINE_PARTICLES.get(),
+                        positionClicked.getX() + 0.5d, positionClicked.getY() + 1, positionClicked.getZ() + 0.5d,
+                        Math.cos(i) * 0.15d, 0.15d, Math.sin(i) * 0.15d);
+            }
+        }
     }
 
     private void addNbtToDataTablet(Player player, BlockPos pos, Block blockBelow) {

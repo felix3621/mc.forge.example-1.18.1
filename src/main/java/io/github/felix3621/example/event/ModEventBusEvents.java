@@ -4,10 +4,14 @@ import io.github.felix3621.example.Example;
 import io.github.felix3621.example.event.loot.CoalCokeFromCreeperAdditionModifier;
 import io.github.felix3621.example.event.loot.CucumberSeedsFromGrassAdditionModifier;
 import io.github.felix3621.example.event.loot.DowsingRodInIglooAdditionModifier;
+import io.github.felix3621.example.particle.ModParticles;
+import io.github.felix3621.example.particle.custom.CitrineParticles;
 import io.github.felix3621.example.recipe.GemCuttingStationRecipe;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeSerializer;
+import net.minecraftforge.client.event.ParticleFactoryRegisterEvent;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -33,5 +37,11 @@ public class ModEventBusEvents {
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
         Registry.register(Registry.RECIPE_TYPE, GemCuttingStationRecipe.Type.ID, GemCuttingStationRecipe.Type.INSTANCE);
+    }
+
+    @SubscribeEvent
+    public static void registerParticleFactories(final ParticleFactoryRegisterEvent event) {
+        Minecraft.getInstance().particleEngine.register(ModParticles.CITRINE_PARTICLES.get(),
+                CitrineParticles.Provider::new);
     }
 }
