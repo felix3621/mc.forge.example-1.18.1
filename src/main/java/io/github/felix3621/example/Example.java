@@ -4,6 +4,7 @@ import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.block.entity.ModBlockEntities;
 import io.github.felix3621.example.block.entity.ModWoodTypes;
 import io.github.felix3621.example.effect.ModEffects;
+import io.github.felix3621.example.fluid.ModFluids;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
 import io.github.felix3621.example.particle.ModParticles;
@@ -59,6 +60,8 @@ public class Example {
         ModRecipes.register(eventBus);
         ModParticles.register(eventBus);
 
+        ModFluids.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -80,6 +83,10 @@ public class Example {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.EBONY_SAPLING.get(), RenderType.cutout());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GEM_CUTTING_STATION.get(), RenderType.translucent());
+
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_BLOCK.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLUID.get(), RenderType.translucent());
+        ItemBlockRenderTypes.setRenderLayer(ModFluids.HONEY_FLOWING.get(), RenderType.translucent());
 
         ModItemProperties.addCustomItemProperties();
 
