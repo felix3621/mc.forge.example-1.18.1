@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "example:citrine_block"
+    }
+  ],
+  "result": {
+    "item": "example:citrine"
+  }
+}

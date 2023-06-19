@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "example:block/raw_citrine_block"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "example:citrine_block"
+    ]
+  },
+  "criteria": {
+    "has_citrine": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "example:citrine"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "example:citrine_block"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_citrine",
+      "has_the_recipe"
+    ]
+  ]
+}
