@@ -18,6 +18,7 @@ import io.github.felix3621.example.screen.ModMenuTypes;
 import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.BetterBrewingRecipe;
 import io.github.felix3621.example.util.ModItemProperties;
+import io.github.felix3621.example.villager.ModVillagers;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -72,6 +73,7 @@ public class Example {
         ModEnchantments.register(eventBus);
 
         ModEntityTypes.register(eventBus);
+        ModVillagers.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
@@ -124,6 +126,8 @@ public class Example {
                     SpawnPlacements.Type.ON_GROUND,
                     Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                     Animal::checkAnimalSpawnRules);
+
+            ModVillagers.registerPOIs();
         });
     }
 }

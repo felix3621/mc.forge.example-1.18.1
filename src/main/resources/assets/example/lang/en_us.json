@@ -84,5 +84,7 @@
 
   "effect.example.freeze": "Freeze",
 
+  "entity.minecraft.villager.example.gem_cutter": "Gem Cutter",
+
   "enchantment.example.lightning_striker": "Lightning Striker"
 }
