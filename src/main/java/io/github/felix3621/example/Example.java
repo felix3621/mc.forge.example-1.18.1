@@ -2,6 +2,7 @@ package io.github.felix3621.example;
 
 import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.block.entity.ModBlockEntities;
+import io.github.felix3621.example.block.entity.ModWoodTypes;
 import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.painting.ModPaintings;
@@ -15,9 +16,13 @@ import io.github.felix3621.example.util.ModItemProperties;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.Sheets;
+import net.minecraft.client.renderer.blockentity.BlockEntityRenderers;
+import net.minecraft.client.renderer.blockentity.SignRenderer;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -77,6 +82,9 @@ public class Example {
         ModItemProperties.addCustomItemProperties();
 
         MenuScreens.register(ModMenuTypes.GEM_CUTTING_STATION_MENU.get(), GemCuttingStationScreen::new);
+
+        WoodType.register(ModWoodTypes.EBONY);
+        BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -85,6 +93,8 @@ public class Example {
 
             BrewingRecipeRegistry.addRecipe(new BetterBrewingRecipe(Potions.AWKWARD,
                     ModItems.CITRINE.get(), ModPotions.FREEZE_POTION.get()));
+
+            Sheets.addWoodType(ModWoodTypes.EBONY);
         });
     }
 }

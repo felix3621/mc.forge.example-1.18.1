@@ -2,6 +2,7 @@ package io.github.felix3621.example.block;
 
 import io.github.felix3621.example.Example;
 import io.github.felix3621.example.block.custom.*;
+import io.github.felix3621.example.block.entity.ModWoodTypes;
 import io.github.felix3621.example.item.ModCreativeModeTab;
 import io.github.felix3621.example.item.ModItems;
 import io.github.felix3621.example.sound.ModSounds;
@@ -161,6 +162,11 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> GEM_CUTTING_STATION = registerBlock("gem_cutting_station",
             () -> new GemCuttingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()), ModCreativeModeTab.EXAMPLE_TAB);
+
+    public static final RegistryObject<Block> EBONY_WALL_SIGN = registerBlockWithoutBlockItem("ebony_wall_sign",
+            () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.EBONY));
+    public static final RegistryObject<Block> EBONY_SIGN = registerBlockWithoutBlockItem("ebony_sign",
+            () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.EBONY));
 
 
 
