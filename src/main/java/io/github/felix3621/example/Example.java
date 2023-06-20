@@ -21,6 +21,7 @@ import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.BetterBrewingRecipe;
 import io.github.felix3621.example.util.ModItemProperties;
 import io.github.felix3621.example.villager.ModVillagers;
+import io.github.felix3621.example.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
@@ -53,7 +54,7 @@ import software.bernie.geckolib3.GeckoLib;
 public class Example {
     public static final String MOD_ID = "example";
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public Example() {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -78,6 +79,8 @@ public class Example {
 
         ModEntityTypes.register(eventBus);
         ModVillagers.register(eventBus);
+
+        ModStructures.register(eventBus);
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
