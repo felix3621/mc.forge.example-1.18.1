@@ -158,10 +158,12 @@ public class ModBlocks {
             }, ModCreativeModeTab.EXAMPLE_TAB);
 
     public static final RegistryObject<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
-            () -> new SaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), ModCreativeModeTab.EXAMPLE_TAB);
+            () -> new ModSaplingBlock(new EbonyTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING),
+                    () -> Blocks.END_STONE), ModCreativeModeTab.EXAMPLE_TAB);
 
     public static final RegistryObject<Block> GEM_CUTTING_STATION = registerBlock("gem_cutting_station",
-            () -> new GemCuttingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()), ModCreativeModeTab.EXAMPLE_TAB);
+            () -> new GemCuttingStationBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).noOcclusion()),
+            ModCreativeModeTab.EXAMPLE_TAB);
 
     public static final RegistryObject<Block> EBONY_WALL_SIGN = registerBlockWithoutBlockItem("ebony_wall_sign",
             () -> new ModWallSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WALL_SIGN), ModWoodTypes.EBONY));
