@@ -3,6 +3,8 @@ package io.github.felix3621.example;
 import io.github.felix3621.example.block.ModBlocks;
 import io.github.felix3621.example.block.entity.ModBlockEntities;
 import io.github.felix3621.example.block.entity.ModWoodTypes;
+import io.github.felix3621.example.config.ExampleClientConfigs;
+import io.github.felix3621.example.config.ExampleCommonConfigs;
 import io.github.felix3621.example.effect.ModEffects;
 import io.github.felix3621.example.enchantment.ModEnchantments;
 import io.github.felix3621.example.entity.ModEntityTypes;
@@ -36,7 +38,9 @@ import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -79,6 +83,9 @@ public class Example {
         eventBus.addListener(this::clientSetup);
 
         GeckoLib.initialize();
+
+        ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, ExampleClientConfigs.SPEC, "example-client.toml");
+        ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, ExampleCommonConfigs.SPEC, "example-common.toml");
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

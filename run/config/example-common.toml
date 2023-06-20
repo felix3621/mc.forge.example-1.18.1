@@ -1,0 +1,8 @@
+
+["Configs for ExampleMod"]
+	#How many Citrine Ore Veins spawn per chunk!
+	"Veins Per Chunk" = 15
+	#How many Citrine Ore Blocks spawn in one vein!
+	#Range: 4 ~ 20
+	"Vein Size" = 15
+
