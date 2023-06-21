@@ -170,6 +170,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> EBONY_SIGN = registerBlockWithoutBlockItem("ebony_sign",
             () -> new ModStandingSignBlock(BlockBehaviour.Properties.copy(Blocks.OAK_SIGN), ModWoodTypes.EBONY));
 
+    public static final RegistryObject<Block> FELIX_PORTAL = registerBlockWithoutBlockItem("felix_portal",
+            FelixPortalBlock::new);
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {

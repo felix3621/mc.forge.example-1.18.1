@@ -20,6 +20,7 @@ import io.github.felix3621.example.screen.ModMenuTypes;
 import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.BetterBrewingRecipe;
 import io.github.felix3621.example.util.ModItemProperties;
+import io.github.felix3621.example.villager.ModPOIs;
 import io.github.felix3621.example.villager.ModVillagers;
 import io.github.felix3621.example.world.dimension.ModDimensions;
 import io.github.felix3621.example.world.structure.ModStructures;
@@ -84,6 +85,8 @@ public class Example {
         ModStructures.register(eventBus);
         ModDimensions.register();
 
+        ModPOIs.register(eventBus);
+
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
 
@@ -123,6 +126,8 @@ public class Example {
         BlockEntityRenderers.register(ModBlockEntities.SIGN_BLOCK_ENTITIES.get(), SignRenderer::new);
 
         EntityRenderers.register(ModEntityTypes.RACCOON.get(), RaccoonRenderer::new);
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FELIX_PORTAL.get(), RenderType.translucent());
     }
 
     private void setup(final FMLCommonSetupEvent event) {

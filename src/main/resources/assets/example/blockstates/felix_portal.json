@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "axis=z": {
+      "model": "example:block/felix_portal_ew"
+    },
+    "axis=x": {
+      "model": "example:block/felix_portal_ns"
+    }
+  }
+}
