@@ -21,6 +21,7 @@ import io.github.felix3621.example.sound.ModSounds;
 import io.github.felix3621.example.util.BetterBrewingRecipe;
 import io.github.felix3621.example.util.ModItemProperties;
 import io.github.felix3621.example.villager.ModVillagers;
+import io.github.felix3621.example.world.dimension.ModDimensions;
 import io.github.felix3621.example.world.structure.ModStructures;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
@@ -81,6 +82,7 @@ public class Example {
         ModVillagers.register(eventBus);
 
         ModStructures.register(eventBus);
+        ModDimensions.register();
 
         eventBus.addListener(this::setup);
         eventBus.addListener(this::clientSetup);
