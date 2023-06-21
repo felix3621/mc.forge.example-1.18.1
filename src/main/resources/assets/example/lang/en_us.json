@@ -35,6 +35,7 @@
 
   "item.example.raccoon_spawn_egg": "Raccoon Spawn Egg",
   "item.example.animated_item": "Animated Item",
+  "item.example.animated_block": "Animated Block",
 
   "block.example.citrine_block": "Citrine Block",
   "block.example.raw_citrine_block": "Raw Citrine Block",
@@ -73,6 +74,7 @@
 
   "block.example.gem_cutting_station": "Gem Cutting Station",
   "block.example.ebony_sign": "Ebony Sign",
+  "block.example.animated_block": "Animated Block",
 
   "itemGroup.exampletab": "Example Mod",
 

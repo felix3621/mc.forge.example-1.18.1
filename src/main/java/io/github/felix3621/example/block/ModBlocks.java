@@ -173,6 +173,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> FELIX_PORTAL = registerBlockWithoutBlockItem("felix_portal",
             FelixPortalBlock::new);
 
+    public static final RegistryObject<Block> ANIMATED_BLOCK = registerBlockWithoutBlockItem("animated_block",
+            () -> new AnimatedBlock(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
