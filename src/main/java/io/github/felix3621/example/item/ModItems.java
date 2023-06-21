@@ -95,6 +95,9 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntityTypes.RACCOON, 0x948e8d, 0x3b3635,
                     new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
 
+    public static final RegistryObject<Item> ANIMATED_ITEM = ITEMS.register("animated_item",
+            () -> new AnimatedItem(new Item.Properties().tab(ModCreativeModeTab.EXAMPLE_TAB)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
